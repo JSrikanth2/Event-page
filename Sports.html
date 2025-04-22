@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Event</title>
+    <link rel="stylesheet" href="style2.css">
+    <style>
+        body {
+            background: url('sports.jpg') center/cover no-repeat;
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 500px;
+            margin: auto;
+        }
+        h1 {
+            font-size: 36px;
+        }
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .prizes {
+            font-weight: bold;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        form {
+            background: whitesmoke;
+            color: black;
+            padding: 20px;
+
+            border-radius: 10px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            background: #ff416c;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #ff4b2b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sports Competition</h1>
+        <p>📌 Overview: <br>
+            Step onto the field and showcase your skills in our Sports Competition! Whether you're a team player or an individual athlete, this event brings thrilling matches and exciting challenges across multiple sports. <br>
+            
+            📌 Sports Categories: <br>
+            🏏 Cricket – Form your team, strategize, and hit big shots to victory. <br>
+            🏐 Volleyball – Show your teamwork, blocking, and spiking skills. <br>
+            🏸 Shuttle Badminton – Test your reflexes, speed, and precision on the court.</p>
+
+        <div class="prizes">
+            🏆 1st Prize: ₹10,000 <br>
+            🥈 2nd Prize: ₹5,000 <br>
+            🥉 3rd Prize: ₹2,500
+        </div>
+
+        <form id="registrationForm">
+            <h2>Register Now</h2>
+        
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+        
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" title="Enter 10-digit phone number">
+        
+            <label for="category">Category:</label>
+            <select id="category" name="category" required>
+                <option value="">--Select--</option>
+                <option value="cricket">Cricket</option>
+                <option value="shuttle">Shuttle</option>
+                <option value="volleyball">Volleyball</option>
+            </select>
+        
+            <label for="message">Any Special Request:</label>
+            <textarea id="message" name="message"></textarea>
+        
+            <button type="submit">Submit</button>
+        </form>
+        
+        <script>
+            document.getElementById("registrationForm").addEventListener("submit", function(event) {
+                event.preventDefault(); // Prevent actual form submission
+                alert("You have successfully registered!");
+                this.reset(); // Optional: reset the form after submission
+            });
+        </script>
+    </div>
+</body>
+</html>
